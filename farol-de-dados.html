@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F4F7FA">
+  <meta name="description" content="Farol de Dados — clareza em cada métrica, decisão sem ruído. Inteligência de dados, dashboards e automação para decisões melhores.">
+  <title>Farol de Dados — Clareza em cada métrica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--ice:#F4F7FA;--navy:#14284B;--orange:#FF6B35;--ink:#18263b;--muted:#65748a;--line:#dfe6ee;--white:#fff;--shadow:0 22px 60px rgba(20,40,75,.10);--radius:22px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ice);color:var(--ink);font-family:'DM Sans',sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}.container{width:min(1160px,calc(100% - 44px));margin:auto}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--orange);font-weight:700;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase}.eyebrow:before{content:'';width:22px;height:2px;background:var(--orange)}h1,h2,h3{font-family:Manrope,sans-serif;line-height:1.12;color:var(--navy);margin:0}h1{font-size:clamp(2.7rem,5.6vw,5rem);letter-spacing:-.055em;font-weight:800}h2{font-size:clamp(2rem,3.6vw,3.15rem);letter-spacing:-.045em}h3{font-size:1.18rem}.lead{font-size:1.12rem;color:var(--muted);max-width:590px}.section{padding:104px 0}.section-head{max-width:650px;margin-bottom:48px}.section-head p{color:var(--muted);font-size:1.05rem;margin:17px 0 0}.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:14px 21px;border-radius:10px;font-weight:700;border:1px solid transparent;transition:.2s;cursor:pointer}.btn-primary{background:var(--orange);color:#fff;box-shadow:0 10px 24px rgba(255,107,53,.22)}.btn-primary:hover{background:#ed5927;transform:translateY(-2px)}.btn-secondary{border-color:#cbd5e1;color:var(--navy);background:rgba(255,255,255,.55)}.btn-secondary:hover{border-color:var(--navy);background:#fff}.arrow{font-size:1.15rem}
+    /* Header */
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(244,247,250,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(20,40,75,.08)}.nav{height:82px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;font-family:Manrope,sans-serif;font-weight:800;color:var(--navy);letter-spacing:-.04em;font-size:1.12rem}.brand-mark{width:34px;height:34px;border:2px solid var(--navy);border-radius:9px;display:grid;place-items:center;position:relative}.brand-mark:before{content:'';width:11px;height:14px;border:2px solid var(--orange);border-bottom:0;position:absolute;top:6px}.brand-mark:after{content:'';position:absolute;width:24px;height:2px;background:var(--navy);bottom:6px}.brand-mark span{position:absolute;width:7px;height:7px;background:var(--orange);border-radius:50%;top:9px}.nav-links{display:flex;align-items:center;gap:30px;color:#52627a;font-size:.92rem;font-weight:600}.nav-links a:hover{color:var(--orange)}.nav-cta{padding:11px 16px}.menu-toggle{display:none;background:none;border:0;color:var(--navy);font-size:1.5rem}
+    /* Hero */
+    .hero{padding:78px 0 88px;overflow:hidden;position:relative}.hero:after{content:'';position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(255,107,53,.10),transparent 68%);right:-170px;top:-130px;pointer-events:none}.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:58px;position:relative;z-index:1}.hero-copy h1{margin:20px 0 22px}.hero-copy h1 em{font-style:normal;color:var(--orange)}.hero-copy .lead{margin:0 0 30px}.hero-actions{display:flex;gap:13px;flex-wrap:wrap}.trust-note{display:flex;align-items:center;gap:11px;margin-top:32px;color:#738096;font-size:.85rem}.trust-icon{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#e5edf5;color:var(--navy);font-weight:800}.visual-wrap{position:relative}.dashboard{background:var(--white);border:1px solid #e6ebf1;border-radius:20px;padding:22px;box-shadow:var(--shadow);transform:rotate(1.1deg)}.dash-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}.dash-label{font-weight:700;color:var(--navy);font-size:.9rem}.dash-period{font-size:.72rem;color:#8b98a9;background:#f3f6f9;padding:7px 10px;border-radius:7px}.metric-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.metric{background:#f7f9fb;padding:13px;border-radius:11px}.metric small{display:block;color:#8290a1;font-size:.67rem}.metric strong{display:block;color:var(--navy);font:800 1.3rem Manrope;margin-top:3px}.metric .up{font-size:.67rem;color:#29966d;font-weight:700}.chart-card{margin-top:14px;border:1px solid #edf0f4;border-radius:12px;padding:15px 15px 8px}.chart-title{display:flex;justify-content:space-between;color:var(--navy);font-weight:700;font-size:.78rem}.chart-title span{font-weight:500;color:#8b98a9}.chart{width:100%;height:auto;display:block;margin-top:12px}.floating-tag{position:absolute;left:-28px;bottom:34px;background:var(--navy);color:#fff;padding:13px 16px;border-radius:12px;box-shadow:0 14px 30px rgba(20,40,75,.2);font-size:.78rem}.floating-tag strong{display:block;color:#ff9b75;font-size:1rem}.hero-logo{display:block;width:min(100%,260px);height:auto;margin:0 auto 20px;border-radius:8px;mix-blend-mode:multiply}
+    /* Value strip */
+    .value-strip{background:var(--navy);color:#fff;padding:27px 0}.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.value-item{display:flex;align-items:center;gap:14px}.value-symbol{width:40px;height:40px;border:1px solid rgba(255,255,255,.22);border-radius:12px;display:grid;place-items:center;color:#ff956f;font-size:1.15rem}.value-item strong{display:block;font:700 .94rem Manrope}.value-item span{color:#b9c5d5;font-size:.78rem}
+    /* Services */
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service-card{background:#fff;border:1px solid #e7edf3;border-radius:var(--radius);padding:28px;min-height:250px;transition:.25s}.service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#d4dee9}.service-icon{width:48px;height:48px;border-radius:14px;background:#fff0e9;color:var(--orange);display:grid;place-items:center;margin-bottom:24px}.service-icon svg{width:23px;height:23px}.service-card p{color:var(--muted);font-size:.93rem;margin:12px 0 0}.service-number{font:800 .75rem Manrope;color:#a9b4c2;letter-spacing:.1em;margin-bottom:13px}
+    /* About */
+    .about{background:#eaf0f5}.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:75px;align-items:center}.about-panel{background:var(--navy);border-radius:24px;padding:35px;color:#fff;position:relative;overflow:hidden;min-height:350px}.about-panel:after{content:'';position:absolute;width:240px;height:240px;border:1px solid rgba(255,255,255,.14);border-radius:50%;right:-65px;bottom:-100px;box-shadow:0 0 0 24px rgba(255,255,255,.035),0 0 0 48px rgba(255,255,255,.025)}.about-panel .mini{color:#ff9b75;text-transform:uppercase;font-size:.72rem;letter-spacing:.15em;font-weight:700}.about-panel blockquote{font:700 clamp(1.6rem,2.5vw,2.2rem) Manrope;letter-spacing:-.04em;margin:30px 0 22px;max-width:340px}.about-panel p{color:#c2cddd;font-size:.9rem;max-width:310px}.about-copy p{color:var(--muted);margin:18px 0}.principles{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin-top:28px}.principle{border-top:2px solid var(--orange);padding-top:12px}.principle strong{display:block;color:var(--navy);font:700 .94rem Manrope}.principle span{font-size:.82rem;color:var(--muted)}
+    /* Process */
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:step}.process-item{position:relative;padding-top:20px;border-top:1px solid #cbd5e1}.process-item:before{counter-increment:step;content:'0' counter(step);display:block;font:800 1.5rem Manrope;color:var(--orange);margin-bottom:22px}.process-item h3{font-size:1.05rem}.process-item p{font-size:.87rem;color:var(--muted);margin:10px 0 0}
+    /* CTA */
+    .contact{padding:0 0 100px}.contact-panel{background:var(--navy);border-radius:26px;padding:58px 62px;display:flex;align-items:center;justify-content:space-between;gap:35px;position:relative;overflow:hidden}.contact-panel:after{content:'';position:absolute;width:330px;height:330px;border:1px solid rgba(255,255,255,.1);border-radius:50%;right:18%;top:-220px;box-shadow:0 0 0 28px rgba(255,255,255,.025),0 0 0 58px rgba(255,255,255,.02)}.contact-copy{position:relative;z-index:1;max-width:620px}.contact-copy .eyebrow{color:#ff9b75}.contact-copy h2{color:#fff;margin:14px 0}.contact-copy p{color:#c2cddd;margin:0}.contact-panel .btn{position:relative;z-index:1;white-space:nowrap}
+    footer{border-top:1px solid var(--line);padding:25px 0 34px}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}.footer-note{color:#8290a1;font-size:.8rem}.footer-brand{font:800 1rem Manrope;color:var(--navy)}.footer-brand span{color:var(--orange)}
+    @media(max-width:900px){.hero-grid{gap:30px}.about-grid{gap:35px}.services-grid{grid-template-columns:repeat(2,1fr)}.process-grid{grid-template-columns:repeat(2,1fr);row-gap:34px}.contact-panel{padding:42px}}
+    @media(max-width:680px){.container{width:min(100% - 34px,560px)}.nav{height:70px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;left:0;right:0;top:70px;padding:20px 24px 24px;background:var(--ice);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:18px}.nav-links.open{display:flex}.nav-cta{display:none}.hero{padding:54px 0 65px}.hero-grid{grid-template-columns:1fr;gap:48px}.hero-copy h1{font-size:clamp(2.7rem,13vw,4rem)}.hero-logo{width:220px;margin-bottom:8px}.visual-wrap{max-width:500px;margin:auto;width:100%}.floating-tag{left:-8px;bottom:18px}.value-grid{grid-template-columns:1fr;gap:18px}.section{padding:76px 0}.services-grid{grid-template-columns:1fr}.service-card{min-height:auto}.about-grid{grid-template-columns:1fr}.about-panel{min-height:300px}.principles{gap:14px}.process-grid{grid-template-columns:1fr 1fr;gap:28px 17px}.contact{padding-bottom:70px}.contact-panel{padding:34px 25px;display:block}.contact-panel .btn{margin-top:25px}.footer-inner{align-items:flex-start;flex-direction:column;gap:8px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  
+    .demo-notice{background:#fff3e9;color:#74402d;text-align:center;padding:8px 16px;font-size:.76rem;font-weight:650;letter-spacing:.02em;border-bottom:1px solid rgba(255,107,53,.18)}
+    .github-credit{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-size:.82rem}
+    .github-credit a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+    .github-credit a:hover{color:var(--orange)}
+  </style>
+</head>
+<body>
+  <div class="demo-notice" role="note">Projeto demonstrativo de portfólio — marca, dados e informações ilustrativos.</div>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Farol de Dados, início"><span class="brand-mark"><span></span></span> FAROL <span style="color:var(--orange);margin-left:-8px">DE DADOS</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+        <a href="#solucoes">Soluções</a><a href="#sobre">Sobre</a><a href="#metodo">Como trabalhamos</a><a href="#contato">Contato</a>
+      </nav>
+      <a class="btn btn-primary nav-cta" href="#contato">Vamos conversar <span class="arrow">↗</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Inteligência de dados</span>
+          <h1>Seus dados têm uma história. <em>Encontre a direção.</em></h1>
+          <p class="lead">Transformamos informações dispersas em indicadores claros, painéis intuitivos e insights que ajudam sua equipe a decidir com confiança.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#contato">Encontre clareza nos seus dados <span class="arrow">↗</span></a><a class="btn btn-secondary" href="#solucoes">Conheça as soluções</a></div>
+          <div class="trust-note"><span class="trust-icon">✓</span> Dados organizados. Decisões mais conscientes.</div>
+        </div>
+        <div class="visual-wrap">
+          <img class="hero-logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNTYwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkZhcm9sIGdlb23DqXRyaWNvIGNvbSBmYWNob3MgZGUgbHV6IGUgZ3LDoWZpY28gZGUgYmFycmFzIj4KPGRlZnM+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJvcmFuZ2UiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNGRjg1NTciLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNGNDUxMUUiLz48L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+CjwhLS0gRmFjaG9zIGRlIGx1eiAtLT4KPHBhdGggZD0iTTE5MCAxNDIgTDUyIDExMiBMNTIgMTc2IEwxOTAgMTYwIFoiIGZpbGw9InVybCgjb3JhbmdlKSIvPgo8cGF0aCBkPSJNNDEwIDE0MiBMNTQ4IDkyIEw1NDggMTkyIEw0MTAgMTYwIFoiIGZpbGw9InVybCgjb3JhbmdlKSIvPgo8IS0tIFRvcnJlIGUgbGFudGVybmEgLS0+CjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzE0Mjg0QiIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSI+CiAgPHBhdGggc3Ryb2tlLXdpZHRoPSIxOCIgZD0iTTI0NiAxMDUgTDMwMCA2NSBMMzU0IDEwNSBMMzU0IDEyNiBMMjQ2IDEyNiBaIi8+CiAgPHBhdGggc3Ryb2tlLXdpZHRoPSIxNyIgZD0iTTIzNSAxMjYgSDM2NSBWMjA1IEgyMzUgWiIvPgogIDxwYXRoIHN0cm9rZS13aWR0aD0iMTciIGQ9Ik0yMTggMjA1IEgzODIgVjI0NiBIMjE4IFoiLz4KICA8cGF0aCBzdHJva2Utd2lkdGg9IjE3IiBkPSJNMjQyIDI0NiBMMjA4IDQ1NCBMMzg4IDM1MCBMMzU4IDI0NiIvPgogIDxwYXRoIHN0cm9rZS13aWR0aD0iMTYiIGQ9Ik0yMjYgMzUwIEwzNjUgMjcwIi8+CiAgPHBhdGggc3Ryb2tlLXdpZHRoPSIxNiIgZD0iTTIxMyA0NDAgTDM3OCAzNDIiLz4KPC9nPgo8IS0tIEphbmVsYSAtLT4KPHBhdGggZD0iTTI4MyAxNTcgUTMwMCAxMzIgMzE3IDE1NyBWMTgxIEgyODMgWiIgZmlsbD0idXJsKCNvcmFuZ2UpIi8+CjwhLS0gUGVxdWVuYSBqYW5lbGEgZGEgdG9ycmUgLS0+CjxwYXRoIGQ9Ik0yOTQgMzAwIEgzMTAgVjMzOCBIMjk0IFoiIGZpbGw9InVybCgjb3JhbmdlKSIvPgo8IS0tIEJhc2UgZSBncsOhZmljbyBhc2NlbmRlbnRlIC0tPgo8ZyBmaWxsPSJ1cmwoI29yYW5nZSkiPgogIDxwYXRoIGQ9Ik0xMDQgNDc4IEgxNzQgVjU0OCBIMTA0IFoiLz4KICA8cGF0aCBkPSJNMjAyIDQ0MCBIMjcyIFY1NDggSDIwMiBaIi8+CiAgPHBhdGggZD0iTTMwMCAzOTAgSDM3MCBWNTQ4IEgzMDAgWiIvPgogIDxwYXRoIGQ9Ik0zOTggMzIyIEg0NjggVjU0OCBIMzk4IFoiLz4KPC9nPgo8ZyBmaWxsPSIjRkZCMDhFIiBvcGFjaXR5PSIuNjUiPgogIDxwYXRoIGQ9Ik0xMDQgNDc4IEgxNzQgVjQ4OCBIMTA0IFoiLz48cGF0aCBkPSJNMjAyIDQ0MCBIMjcyIFY0NTAgSDIwMiBaIi8+CiAgPHBhdGggZD0iTTMwMCAzOTAgSDM3MCBWNDAwIEgzMDAgWiIvPjxwYXRoIGQ9Ik0zOTggMzIyIEg0NjggVjMzMiBIMzk4IFoiLz4KPC9nPgo8cGF0aCBkPSJNNjIgNTUyIEg1MzgiIHN0cm9rZT0iIzE0Mjg0QiIgc3Ryb2tlLXdpZHRoPSIxNSIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIvPgo8L3N2Zz4=" alt="Farol de Dados — Clareza em cada métrica, decisão sem ruído">
+          <div class="dashboard" aria-label="Ilustração de um painel de indicadores">
+            <div class="dash-top"><span class="dash-label">Visão geral de desempenho</span><span class="dash-period">PAINEL DEMONSTRATIVO</span></div>
+            <div class="metric-row">
+              <div class="metric"><small>Indicador A</small><strong>84,6%</strong><span class="up">↑ 8,2% no período</span></div>
+              <div class="metric"><small>Indicador B</small><strong>1.248</strong><span class="up">↑ 5,4% no período</span></div>
+              <div class="metric"><small>Indicador C</small><strong>R$ 42k</strong><span class="up">↑ 3,1% no período</span></div>
+            </div>
+            <div class="chart-card"><div class="chart-title">Evolução dos indicadores <span>Exemplo ilustrativo</span></div>
+              <svg class="chart" viewBox="0 0 500 170" role="img" aria-label="Gráfico ilustrativo de barras em tendência crescente">
+                <defs><linearGradient id="barGrad" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#FF6B35"/><stop offset="1" stop-color="#ffb08f"/></linearGradient></defs>
+                <g stroke="#e9eef3" stroke-width="1"><path d="M35 20H485M35 58H485M35 96H485M35 134H485"/></g>
+                <g fill="#9aa7b6" font-size="9" font-family="DM Sans"><text x="4" y="23">100</text><text x="10" y="61">75</text><text x="10" y="99">50</text><text x="10" y="137">25</text></g>
+                <g fill="url(#barGrad)"><rect x="58" y="94" width="35" height="40" rx="5"/><rect x="124" y="80" width="35" height="54" rx="5"/><rect x="190" y="67" width="35" height="67" rx="5"/><rect x="256" y="51" width="35" height="83" rx="5"/><rect x="322" y="39" width="35" height="95" rx="5"/><rect x="388" y="22" width="35" height="112" rx="5"/></g>
+                <g fill="#8391a2" font-size="10" font-family="DM Sans" text-anchor="middle"><text x="75" y="153">JAN</text><text x="141" y="153">FEV</text><text x="207" y="153">MAR</text><text x="273" y="153">ABR</text><text x="339" y="153">MAI</text><text x="405" y="153">JUN</text></g>
+              </svg>
+            </div>
+          </div>
+          <div class="floating-tag"><strong>Clareza em foco</strong>Indicadores que orientam ações</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="value-strip" aria-label="Pilares de trabalho"><div class="container value-grid">
+      <div class="value-item"><span class="value-symbol">⌕</span><div><strong>Visão integrada</strong><span>Informações em um só lugar</span></div></div>
+      <div class="value-item"><span class="value-symbol">▥</span><div><strong>Leitura simplificada</strong><span>Indicadores fáceis de interpretar</span></div></div>
+      <div class="value-item"><span class="value-symbol">↗</span><div><strong>Decisão orientada</strong><span>Mais contexto para agir</span></div></div>
+    </div></section>
+
+    <section class="section" id="solucoes"><div class="container">
+      <div class="section-head"><span class="eyebrow">O que fazemos</span><h2>Informação útil começa com a pergunta certa.</h2><p>Organizamos o caminho entre a coleta de dados e a tomada de decisão, com soluções adequadas à realidade de cada operação.</p></div>
+      <div class="services-grid">
+        <article class="service-card"><div class="service-number">01 / VISUALIZAÇÃO</div><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18M7 14l4-4 3 3 6-7"/><path d="M16 6h4v4"/></svg></div><h3>Dashboards e indicadores</h3><p>Painéis interativos que transformam números em uma visão objetiva do desempenho e dos resultados.</p></article>
+        <article class="service-card"><div class="service-number">02 / ORGANIZAÇÃO</div><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7"/></svg></div><h3>Tratamento e integração</h3><p>Estruturação, padronização e integração de fontes para construir uma base mais confiável e consistente.</p></article>
+        <article class="service-card"><div class="service-number">03 / EFICIÊNCIA</div><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4 14h7l-1 8 10-13h-7l0-7Z"/></svg></div><h3>Automação de processos</h3><p>Redução de tarefas repetitivas com fluxos automatizados, validações e geração de relatórios.</p></article>
+      </div>
+    </div></section>
+
+    <section class="section about" id="sobre"><div class="container about-grid">
+      <div class="about-panel"><span class="mini">Nosso propósito</span><blockquote>“Quando os dados ficam claros, o próximo passo também fica.”</blockquote><p>Menos ruído na informação. Mais segurança para escolher caminhos.</p></div>
+      <div class="about-copy"><span class="eyebrow">Sobre o Farol</span><h2>Clareza para enxergar além dos números.</h2><p>O Farol de Dados é uma proposta de inteligência analítica que aproxima pessoas e informações. Acreditamos que dados só geram valor quando são compreendidos e transformados em ações.</p><p>Por isso, cada projeto começa pelo entendimento do contexto: quais perguntas precisam ser respondidas, quais indicadores realmente importam e como apresentar tudo isso de forma simples.</p>
+        <div class="principles"><div class="principle"><strong>Contexto antes dos gráficos</strong><span>Entender o desafio orienta a solução.</span></div><div class="principle"><strong>Simplicidade com propósito</strong><span>Visual limpo, informação relevante.</span></div></div>
+      </div>
+    </div></section>
+
+    <section class="section" id="metodo"><div class="container">
+      <div class="section-head"><span class="eyebrow">Nosso processo</span><h2>Do cenário atual a uma visão mais clara.</h2><p>Um processo colaborativo, com etapas transparentes e entregas alinhadas aos objetivos do projeto.</p></div>
+      <div class="process-grid">
+        <article class="process-item"><h3>Diagnóstico</h3><p>Entendemos o negócio, as fontes disponíveis e as decisões que precisam de apoio.</p></article>
+        <article class="process-item"><h3>Estruturação</h3><p>Organizamos os dados, definimos métricas e estabelecemos critérios de qualidade.</p></article>
+        <article class="process-item"><h3>Construção</h3><p>Desenvolvemos painéis, relatórios ou automações com foco na experiência de uso.</p></article>
+        <article class="process-item"><h3>Evolução</h3><p>Validamos os resultados e identificamos oportunidades de melhoria contínua.</p></article>
+      </div>
+    </div></section>
+
+    <section class="contact" id="contato"><div class="container"><div class="contact-panel">
+      <div class="contact-copy"><span class="eyebrow">Vamos começar?</span><h2>Seu próximo passo pode estar nos dados.</h2><p>Conte um pouco sobre seu desafio. Vamos encontrar juntos uma forma mais clara de acompanhar resultados e tomar decisões.</p></div>
+      <a class="btn btn-primary" href="mailto:octavio.polari@gmail.com?subject=Visita%20ao%20site%20%E2%80%94%20Farol%20de%20Dados&body=Ol%C3%A1%21%20Visitei%20o%20site%20e%20testei%20as%20funcionalidades.%20Estou%20entrando%20em%20contato%20para%20saber%20mais.">Fale com a gente <span class="arrow">↗</span></a>
+    </div></div></section>
+  </main>
+  <footer><div class="container footer-inner"><div class="footer-brand">FAROL <span>DE DADOS</span></div><div class="footer-note">Clareza em cada métrica, decisão sem ruído.</div><div class="footer-note">© <span id="year"></span> Farol de Dados. Todos os direitos reservados.</div><div class="github-credit">Site demonstrativo desenvolvido por Octavio Polari · <a href="https://github.com/octavio-polari" target="_blank" rel="noopener noreferrer">GitHub</a></div></div></footer>
+  <script>
+    const menuToggle=document.getElementById('menuToggle');
+    const navLinks=document.getElementById('navLinks');
+    menuToggle.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));menuToggle.textContent=open?'×':'☰';});
+    navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{navLinks.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.textContent='☰';}));
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
